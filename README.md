@@ -1,4 +1,4 @@
-# suome
+# Suome+
 Suome is a webapplication to help learning Finnish languages using songs.
 The objective is to teach languages from songs.
 Scraped thousands of lyrics and analysed them using NLP library(Python).
