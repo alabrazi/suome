@@ -5,7 +5,8 @@ Scraped thousands of lyrics and analysed them using NLP library(Python).
 Research way to classify songs difficulties that are suitable for learners.
 Research the features and design the interface and interactions for web application (Node.js and Javascript).
 
-# Main Stack: Javascript, Material-UI, Node.js, MongoDB, React.js, Bitbucket, Python, TextBlob, pattern-vector
+# Main Stack
+Javascript, Material-UI, Node.js, MongoDB, React.js, Bitbucket (Python, TextBlob, pattern-vector are used for NLP other repo)
 
 # Features
 Userlogin using facebook, browse songs, like songs and mark songs as studied. The application has chat service for each song where users ask questions for others.
