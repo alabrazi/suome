@@ -1,0 +1,8 @@
+node_modules
+uncaughtExceptions.log
+logfile.log
+config/production.json
+server.crt
+server.csr
+server.key
+server.key.withpassphase

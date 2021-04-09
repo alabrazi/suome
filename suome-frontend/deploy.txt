@@ -1,0 +1,8 @@
+- run yarn build when you think you want to deploy
+- this will generate some new files, you need to add them to git and push to our repo
+ssh albara1@magi.cs.aalto.fi
+ssh suomea.cs.aalto.fi
+- get into our frontend folder
+cd /home/liang/suomea/frontend
+- run sudo git pull, now the server folder should pull the latest changes you've pushed
+- then run sudo pm2 restart all

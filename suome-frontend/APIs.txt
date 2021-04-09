@@ -1,0 +1,143 @@
+delete reply API:
+
+DELETE https://suomea.online/api/replies/5b9bcf569b06ad257473a7fc
+
+https://suomea.loveyoung.me:3000/api/auth/facebook
+ala 5b51c5d72618b8c3eebf1bf5
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YjUxYzVkNzI2MThiOGMzZWViZjFiZjUiLCJmYWNlYm9va0lkIjoiMTg2NjQ2MDE2NjcwNzgyNyIsInVzZXJuYW1lIjoiYWxhYnJhemkiLCJpYXQiOjE1MzIwODU3MTl9.iRdhrLl1hg7AcVs-cofircrz7Q7Cwn4nz652NEXs0kI
+
+const url =`${Config.API}/topics`
+
+All endpoints start with /api/
+Users
+?page=1&per_page=10 
+
+GET /users (auth, admin)
+
+GET /users/:id (auth)
+
+POST /users (auth, admin)
+
+Topics
+GET /topics
+
+POST /topics (auth, admin)
+
+PUT /topics/:id (auth, admin)
+
+GET /topics/:id
+
+DELETE /topics/:id (auth, admin)
+
+POST /topics/:id/like (auth)
+
+POST /topics/:id/unlike (auth)
+
+Replies
+GET /replies/:id (auth)
+
+POST /replies (auth) // this one contains two senerios: "reply to topic" and "reply to reply"
+
+POST /replies/:id/upvote
+
+POST /replies/:id/downvote
+
+PUT /replies/:id
+
+Notifications
+?page=1&per_page=10&type=(unread/read)
+
+GET /notifications (auth)
+
+POST /notifications (auth)
+
+POST /notifications/:id/read (auth)
+
+DELETE /notifications/:id (auth)
+
+get topics
+[
+    {
+        "_id": "5b5e3e67576357549ea94bbf",
+        "tags": [
+            "tag1",
+            "tag2"
+        ],
+        "featuredWords": [
+            "summer",
+
+        ],
+        "likes": 0,
+        "title": "On the way to the south",
+        "coverImg": "/covers/On the way to the south.jpg",
+        "replyCount": 1
+    },
+    {
+        "_id": "5b5e4f78576357549ea94bc0",
+        "tags": [
+            "slow",
+            "colorful",
+            "children"
+        ],
+        "featuredWords": [
+            "drink"
+        ],
+        "likes": 0,
+        "title": "This Morning",
+        "coverImg": "http://i3.ytimg.com/vi/qw140Cr7IV8/maxresdefault.jpg",
+        "replyCount": 0
+    }
+
+]
+
+get topic details
+
+{
+    "tags": [
+        "tag1",
+        "tag2"
+    ],
+    "featuredWords": [
+        "summer"
+    ],
+    "likes": 0,
+    "replies": [
+        {
+            "subReplies": [],
+            "votes": 0,
+            "_id": "5b5f0565576357549ea94bc7",
+            "content": "reply to topic test1",
+            "owner": null,
+            "parentTopic": "5b5e3e67576357549ea94bbf",
+            "createdAt": "2018-07-30T12:32:37.956Z",
+            "updatedAt": "2018-07-30T12:32:37.956Z",
+            "__v": 0
+        }
+    ],
+    "_id": "5b5e3e67576357549ea94bbf",
+    "title": "On the way to the south",
+    "type": "song",
+    "source": "https://www.youtube.com/watch?v=E4bQmgvD6sU",
+    "description": "topic description",
+    "coverImg": "/covers/On the way to the south.jpg",
+    "content": [
+        {
+            "fi": "finnish1",
+            "en": "english1"
+        },
+        {
+            "fi": "finnish2",
+            "en": "english2"
+        }
+    ],
+    "owner": {
+        "_id": "5b51c5d72618b8c3eebf1bf5",
+        "facebookId": "1866460166707827",
+        "avatar": "http://graph.facebook.com/1866460166707827/picture",
+        "name": "Ala Brazi",
+        "username": "alabrazi"
+    },
+    "createdAt": "2018-07-29T22:23:35.607Z",
+    "updatedAt": "2018-07-29T23:53:16.698Z",
+    "__v": 0
+}

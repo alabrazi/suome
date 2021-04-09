@@ -1,0 +1,8 @@
+{
+	"jwtPrivateKey": "",
+	"FB_CLIENT_ID": "FB_clientId",
+	"FB_CLIENT_SECRET": "FB_clientSecret",
+	"FB_CB_URL": "FB_CB_URL",
+	"admins": ["1615467665248229"],
+	"db": "mongodb://localhost:27017/suomea"
+}
